@@ -33,7 +33,9 @@
               </AmountDetails>
             </BillingDetails>
           </TransactionDetails>
-          <MethodDetails><ServiceType>LIT_BANK</ServiceType></MethodDetails>
+          <MethodDetails>
+            <ServiceType>LIT_BANK</ServiceType>
+          </MethodDetails>
         </AlternativePayment>
       </APMTxn>
     </APMTxns>

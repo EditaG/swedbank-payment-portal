@@ -116,12 +116,11 @@ class PurchaseBuilderTest extends AbstractCommunicationEntityTest
 
     /**
      * Check what happens when required value is not set (should throw an exception).
-     *
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Property named 'failureUrl' isn't set. Please set it.
      */
     public function testBuilderNoValueSet()
     {
+        $this->expectExceptionMessage("Property named 'failureUrl' isn't set. Please set it.");
+        $this->expectException(\InvalidArgumentException::class);
         $purchaseBuilder = new PurchaseBuilder();
         $purchaseBuilder->setAmountValue(100)
             ->setAmountExponent(2)
@@ -135,17 +134,17 @@ class PurchaseBuilderTest extends AbstractCommunicationEntityTest
             ->setPassword('********')
             ->setLanguage('en')
             ->setPageSetId(5)
+            ->setDescription('description')
             ->getPurchaseRequest();
     }
 
     /**
      * Check what happens when required value is not set (should throw an exception).
-     *
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage merchantReference must be max 16 characters. Given: 12345678901234567, chars: 17
      */
     public function testGivenMerchantReferenceWasGreaterThan16Chars()
     {
+        $this->expectExceptionMessage("merchantReference must be max 16 characters. Given: 12345678901234567, chars: 17");
+        $this->expectException(\RuntimeException::class);
         $purchaseBuilder = new PurchaseBuilder();
         $purchaseBuilder->setAmountValue(100)
             ->setDescription('description')

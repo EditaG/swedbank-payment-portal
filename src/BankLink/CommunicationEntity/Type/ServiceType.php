@@ -144,7 +144,7 @@ class ServiceType extends AbstractEnumerableType
     /**
      * Custom deserialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "deserialization")
+     * @
      *
      * @param XmlDeserializationVisitor $visitor
      * @param null|array                $data
@@ -158,7 +158,7 @@ class ServiceType extends AbstractEnumerableType
     /**
      * Custom serialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "serialization")
+     *
      *
      * @param XmlSerializationVisitor $visitor
      */

@@ -1,6 +1,7 @@
 services:
     pg.serializer:
         class: SwedbankPaymentPortal\Serializer
+        public: true
 
     pg.network:
         class: SwedbankPaymentPortal\Network

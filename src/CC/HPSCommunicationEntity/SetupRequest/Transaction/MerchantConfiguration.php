@@ -43,7 +43,7 @@ class MerchantConfiguration
     {
         $merchantLocation = '';
         $this->channel = $channel;
-        $this->merchantLocation = $merchantLocation;
+        $this->merchantLocation = null;
     }
 
     /**

@@ -57,7 +57,7 @@ class MethodDetails
     /**
      * Custom serialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "serialization")
+     *
      *
      * @param XmlSerializationVisitor $visitor
      */

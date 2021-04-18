@@ -4,7 +4,7 @@
   <reason>ACCEPTED</reason>
   <PayPalTxn>
     <ack>Success</ack>
-    <amt>10.00</amt>
+    <amt>10.0</amt>
     <build>18308778</build>
     <correlationid>d675c542912e3</correlationid>
     <currencycode>EUR</currencycode>
@@ -20,7 +20,7 @@
     <securemerchantaccountid>ZSB25R5CXNMJY</securemerchantaccountid>
     <shippingoptionisdefault>false</shippingoptionisdefault>
     <successpageredirectrequested>false</successpageredirectrequested>
-    <taxamt>0.00</taxamt>
+    <taxamt>0.0</taxamt>
     <timestamp>2016-01-08T10:35:36Z</timestamp>
     <token>EC-46690288NG459311W</token>
     <transactionid>3MS18119XY756351N</transactionid>

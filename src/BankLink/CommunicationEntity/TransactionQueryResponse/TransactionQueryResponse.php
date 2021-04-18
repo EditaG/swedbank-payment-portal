@@ -72,7 +72,7 @@ class TransactionQueryResponse extends AbstractResponse
      *
      * @var \DateTime
      *
-     * @Annotation\Type("DateTime<'U'>")
+     * @Annotation\Type("DateTime<'Y-m-d H:i:s'>")
      * @Annotation\SerializedName("time")
      * @Annotation\XmlElement(cdata=false)
      */

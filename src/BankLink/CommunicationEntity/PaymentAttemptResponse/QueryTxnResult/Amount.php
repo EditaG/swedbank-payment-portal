@@ -124,7 +124,7 @@ class Amount
     /**
      * Custom deserialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "deserialization")
+     *
      *
      * @param XmlDeserializationVisitor $visitor
      * @param \SimpleXMLElement         $data
@@ -140,7 +140,7 @@ class Amount
     /**
      * Custom serialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "serialization")
+     *
      *
      * @param XmlSerializationVisitor $visitor
      */

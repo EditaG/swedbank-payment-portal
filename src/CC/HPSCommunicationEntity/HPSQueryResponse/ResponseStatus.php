@@ -54,11 +54,11 @@ class ResponseStatus extends AbstractStatus
     final public static function HpsDynamicDataFieldTooLong() { return self::get(818); }
     final public static function HpsAwaitingCustomerCard() { return self::get(820); }
 
-    
+
     /**
      * Custom deserialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "deserialization")
+     *
      *
      * @param XmlDeserializationVisitor $visitor
      * @param null|array                $data
@@ -76,7 +76,7 @@ class ResponseStatus extends AbstractStatus
     /**
      * Custom serialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "serialization")
+     *
      *
      * @param XmlSerializationVisitor $visitor
      * @param null|array              $data
@@ -84,11 +84,9 @@ class ResponseStatus extends AbstractStatus
      *
      * @return \DOMText
      */
-    public function serialize(XmlSerializationVisitor $visitor, $data, SerializationContext $context)
+    public function serialize(XmlSerializationVisitor $visitor, $data, array $type, SerializationContext $context)
     {
-        /** @var PropertyMetadata $propertyMetadata */
-        $propertyMetadata = iterator_to_array($context->getMetadataStack())[$context->getMetadataStack()->count() - 2];
-        if (in_array('asString', $propertyMetadata->type['params'])) {
+        if (in_array('asString', $type['params'])) {
             return new \DOMText(array_search($this->id(), self::TYPE_MAP));
         }
 

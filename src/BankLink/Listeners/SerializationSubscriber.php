@@ -5,9 +5,11 @@ namespace SwedbankPaymentPortal\BankLink\Listeners;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
 use JMS\Serializer\EventDispatcher\ObjectEvent;
 use JMS\Serializer\EventDispatcher\PreDeserializeEvent;
+use JMS\Serializer\EventDispatcher\PreSerializeEvent;
 use JMS\Serializer\XmlDeserializationVisitor;
 use JMS\Serializer\XmlSerializationVisitor;
 use SwedbankPaymentPortal\BankLink\CommunicationEntity\PaymentAttemptResponse\QueryTxnResult\Method;
+use SwedbankPaymentPortal\SerializeHandlerCallbackInterface;
 
 /**
  * Handles serialization and deserialization.

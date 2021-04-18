@@ -44,15 +44,15 @@ class MerchantNotificationResponse
     /**
      * Custom serialization logic.
      *
-     * @Annotation\HandlerCallback("xml", direction = "serialization")
+     *
      *
      * @param XmlSerializationVisitor $visitor
      */
     public function serialize(XmlSerializationVisitor $visitor)
     {
-        $visitor->document = $visitor->createDocument(null, null, false);
-        $currentNode = $visitor->document->createElement('Response');
+        $document = $visitor->getDocument();
+        $currentNode = $document->createElement('Response');
         $currentNode->nodeValue = $this->getResponseString();
-        $visitor->document->appendChild($currentNode);
+        $document->appendChild($currentNode);
     }
 }
